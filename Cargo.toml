@@ -8,5 +8,9 @@ edition = "2018"
 name = "blink_led"
 path = "src/blink_led.rs"
 
+[[bin]]
+name = "pov_toy"
+path = "src/pov_toy.rs"
+
 [dependencies]
 ruduino = "0.2"

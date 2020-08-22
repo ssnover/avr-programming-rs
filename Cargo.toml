@@ -1,0 +1,12 @@
+[package]
+name = "avr-programming-rs"
+version = "0.1.0"
+authors = ["Shane Snover <ssnover95@gmail.com>"]
+edition = "2018"
+
+[[bin]]
+name = "blink_led"
+path = "src/blink_led.rs"
+
+[dependencies]
+ruduino = "0.2"

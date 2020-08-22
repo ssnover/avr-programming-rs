@@ -11,13 +11,13 @@ use avr_core::{DDRB, PORTB};
 pub extern "C" fn main() {
     // Data Direction Register B:
     // Writing a one to the bit enables output.
-    DDRB::set_mask_raw(0x01u8);
+    DDRB::set_mask_raw(0x0000_0001);
 
     loop {
-        PORTB::set_mask_raw(0x01u8); // Turn on the first LED bit/pin in PORTB
+        PORTB::set_mask_raw(0x0000_0001); // Turn on the first LED bit/pin in PORTB
         util::delay_ms(1000); // Wait
 
-        PORTB::unset_mask_raw(0x01u8); // Turn off first bit in PORTB
+        PORTB::unset_mask_raw(0x0000_0001); // Turn off first bit in PORTB
         util::delay_ms(1000); // Wait
     }
 }
